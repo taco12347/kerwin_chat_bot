@@ -23,11 +23,11 @@ def callback():
 
     # get request body as text
     body = request.get_data(as_text=True)
-    app.logger.info("Request body: " + body + "Test")
+    app.logger.info("Request body: " + body)
 
     # handle webhook body
     try:
-        handler.handle(body, signature)
+        handler.handle(body + "Test", signature)
     except InvalidSignatureError:
         print("Invalid signature. Please check your channel access token/channel secret.")
         abort(400)
