@@ -1,2 +1,3 @@
-# kerwin_chat_bot
-Line Chat Bot
+# Kerwin Chat Bot
+
+## 主要功能：

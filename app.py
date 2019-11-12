@@ -1,7 +1,9 @@
 from flask import Flask, request, abort
 from linebot import LineBotApi, WebhookHandler
-from linebot.exceptions import InvalidSignatureError
+from linebot.exceptions import InvalidSignatureError, LineBotApiError
 from linebot.models import *
+
+import msg_source as msg_src
 
 app = Flask(__name__)
 
@@ -36,10 +38,18 @@ def handle_follow(event):
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
-    line_bot_api.reply_message(
-        event.reply_token,
-        TextSendMessage(text='Hello, 我是 Kerwin!!'))
+    try:
+        profile = line_bot_api.get_profile(event.source.user_id)
+        app.logger.info("display_name: " + profile.display_name)
+        app.logger.info("user_id: " + profile.user_id)
+        app.logger.info("picture_url: " + profile.picture_url)
+        app.logger.info("status_message: " + profile.status_message)
+    except LineBotApiError:
+        app.logger.error("Can not get user profile.")
 
+    if 'help' in event.message.text:
+        
+        return None
 
 if __name__ == "__main__":
     app.run()
