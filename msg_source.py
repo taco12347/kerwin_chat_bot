@@ -48,7 +48,7 @@ work = TemplateSendMessage(
     alt_text='My Work',
     template=ButtonsTemplate(
         thumbnail_image_url='https://miro.medium.com/fit/c/256/256/2*Ka2wd39BpMA6lm4zanG1ng.png',
-        title='工作經歷',
+        title='工作',
         text='SkyREC：後端工程師 _ 2018/10 ~ 2019/11',
         actions=[
             URITemplateAction(label='SkyREC', uri='https://www.skyrec.cc/'),
@@ -62,5 +62,5 @@ responseDict = {
     '興趣': interest,
     '經歷': experience,
     '學歷': education,
-    '工作經歷': work
+    '工作': work
 }
