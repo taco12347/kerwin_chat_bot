@@ -73,5 +73,11 @@ def handle_sticker_message(event):
         line_bot_api.push_message(event.source.user_id, TextSendMessage(text='我也想要這個貼圖>口<!!!!'))
         line_bot_api.push_message(event.source.user_id, StickerSendMessage(package_id=11539, sticker_id=52114141))
 
+@handler.add(PostbackEvent)
+def handle_postback(event):
+    if event.postback.data in msg_src.postbackDict.keys():
+        for msg in msg_src.postbackDict[event.postback.data]:
+            line_bot_api.push_message(event.source.user_id, msg)
+
 if __name__ == "__main__":
     app.run()

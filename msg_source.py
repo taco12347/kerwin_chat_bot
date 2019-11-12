@@ -28,6 +28,7 @@ experience = TemplateSendMessage(
         actions=[
             MessageTemplateAction(label='學歷', text='學歷'),
             MessageTemplateAction(label='工作', text='工作'),
+            PostbackAction(label='社團', display_text='社團', data='society'),
         ]
     )
 )
@@ -112,3 +113,12 @@ responseDict = {
 
 
 }
+
+society = [
+    TextSendMessage(text='第12屆北科資工系學會 - 活動長 _ 2012年 - 2013年'),
+    TextSendMessage(text='100 級北科采音吉他社 - 公關長 _ 2012年 - 2013年'),
+    TextSendMessage(text='第13屆赤弦獎全國民歌比賽 - 公關長 _ 2013年'),
+    TextSendMessage(text='北科資工系迎新 - 活動顧問 _ 2013年 - 2018年'),
+]
+
+postbackDict = { 'society' : society }
