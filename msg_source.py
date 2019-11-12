@@ -15,6 +15,9 @@ about_me = TemplateSendMessage(
     )
 )
 
+personality = TextSendMessage(text='我是一個樂觀進取的人，喜歡嘗試新的事物，不喜歡百無聊賴的人生，喜歡和人們接觸，一開始看起來有點難以接近，但認識之後就會發現不一樣的我')
+
 responseDict = {
-    '關於我': about_me
-} 
+    '關於我': about_me,
+    '個性': personality
+}
