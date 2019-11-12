@@ -69,12 +69,12 @@ expertise = TemplateSendMessage(
     )
 )
 
-skill = TextSendMessage(text='大學到碩班較常使用的是 C/C++ ，後來因為工作是跟機器學習相關因而開始轉向 Python 的跑道，平時使用 Linux 的系統做開發環境，也在上一份工作當中學會部屬 Docker')
+skill = TextSendMessage(text='大學到碩班較常使用的是 C/C++ ，後來因為工作是跟機器學習相關因而開始轉向 Python 的跑道，平時使用 Linux 的系統做開發環境，也在上一份工作當中學會佈署 Docker')
 
 music = TemplateSendMessage(
     alt_text='My Music',
     template=ButtonsTemplate(
-        thumbnail_image_url='http://www.jrtstudio.com/files/music_player_icon.png',
+        thumbnail_image_url='https://pbs.twimg.com/profile_images/3338800670/ec418405dea1befbb825f836adea8b24_400x400.jpeg',
         title='音樂人生',
         text='工作之餘音樂是我不可或缺的部分人生，我平常會寫一些創作放到網站上，有時候也會辦一些很小很小的表演',
         actions=[
