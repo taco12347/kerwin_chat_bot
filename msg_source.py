@@ -27,7 +27,7 @@ experience = TemplateSendMessage(
         text='好奇我的經歷嗎？ 選一個你想知道的吧！',
         actions=[
             MessageTemplateAction(label='學歷', text='學歷'),
-            MessageTemplateAction(label='工作經歷', text='工作經歷'),
+            MessageTemplateAction(label='工作經歷', text='工作'),
         ]
     )
 )
@@ -48,7 +48,7 @@ work = TemplateSendMessage(
     alt_text='My Work',
     template=ButtonsTemplate(
         thumbnail_image_url='https://miro.medium.com/fit/c/256/256/2*Ka2wd39BpMA6lm4zanG1ng.png',
-        title='工作',
+        title='工作經歷',
         text='SkyREC：後端工程師 _ 2018/10 ~ 2019/11',
         actions=[
             URITemplateAction(label='SkyREC', uri='https://www.skyrec.cc/'),
