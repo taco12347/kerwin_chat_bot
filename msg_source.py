@@ -37,7 +37,7 @@ education = TemplateSendMessage(
     template=ButtonsTemplate(
         thumbnail_image_url='https://miro.medium.com/fit/c/256/256/2*Ka2wd39BpMA6lm4zanG1ng.png',
         title='學歷',
-        text='碩士：國立臺北科技大學 - 資訊工程所\n大學：國立臺北科技大學 - 資訊工程系',
+        text='碩士：\n國立臺北科技大學 - 資訊工程所\n大學：\n國立臺北科技大學 - 資訊工程系',
         actions=[
             URITemplateAction(label='臺北科技大學 - 資訊工程系', uri='https://csie.ntut.edu.tw/csie/index_i.htm'),
         ]
@@ -49,9 +49,37 @@ work = TemplateSendMessage(
     template=ButtonsTemplate(
         thumbnail_image_url='https://miro.medium.com/fit/c/256/256/2*Ka2wd39BpMA6lm4zanG1ng.png',
         title='工作經歷',
-        text='SkyREC：後端工程師 _ 2018/10 ~ 2019/11',
+        text='2018/10 ~ 2019/11\nSkyREC：後端工程師',
         actions=[
             URITemplateAction(label='SkyREC', uri='https://www.skyrec.cc/'),
+        ]
+    )
+)
+
+expertise = TemplateSendMessage(
+    alt_text='My Expertise',
+    template=ButtonsTemplate(
+        thumbnail_image_url='https://pbs.twimg.com/profile_images/3338800670/ec418405dea1befbb825f836adea8b24_400x400.jpeg',
+        title='專長',
+        text='你想知道哪方面的專長呢？',
+        actions=[
+            MessageTemplateAction(label='技能', text='技能')
+            MessageTemplateAction(label='音樂', text='音樂')
+        ]
+    )
+)
+
+skill = TextSendMessage(text='大學到碩班較常使用的是 C/C++ ，後來因為工作是跟機器學習相關因而開始轉向 Python 的跑道，平時使用 Linux 的系統做開發環境，也在上一份工作當中學會部屬 Docker')
+
+music = TemplateSendMessage(
+    alt_text='My Music',
+    template=ButtonsTemplate(
+        thumbnail_image_url='http://download.seaicons.com/icons/blackvariant/button-ui-app-pack-one/1024/Google-Music-Manager-icon.png',
+        title='音樂人生',
+        text='工作之餘音樂是我不可或缺的部分人生，我平常會寫一些創作放到網站上，有時候也會辦一些很小很小的表演',
+        actions=[
+            URITemplateAction(label='Youtube', uri='https://www.youtube.com/watch?v=ENb51OHHgCA'),
+            URITemplateAction(label='Streec Voice', uri='https://streetvoice.com/taco12347/'),
         ]
     )
 )
@@ -63,5 +91,8 @@ responseDict = {
     '興趣': interest,
     '經歷': experience,
     '學歷': education,
-    '工作': work
+    '工作': work,
+    '專長': expertise,
+    '技能': skill,
+    '音樂': music
 }
