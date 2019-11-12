@@ -27,7 +27,7 @@ experience = TemplateSendMessage(
         text='好奇我的經歷嗎？ 選一個你想知道的吧！',
         actions=[
             MessageTemplateAction(label='學歷', text='學歷'),
-            MessageTemplateAction(label='工作經歷', text='工作'),
+            MessageTemplateAction(label='工作', text='工作'),
         ]
     )
 )
@@ -55,6 +55,7 @@ work = TemplateSendMessage(
         ]
     )
 )
+
 
 responseDict = {
     '關於我': about_me,
