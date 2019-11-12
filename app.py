@@ -34,12 +34,12 @@ def callback():
 
     return 'OK'
 
-@handler.add(FollowEvent)
-def handle_follow(event):
-    line_bot_api.push_message(event.source.userId, StickerSendMessage(packageId=11539, stickerId=52114133))
-    line_bot_api.push_message(event.source.userId, TextSendMessage(text='Hello, 歡迎你加入 Kerwin-Bot 的好友行列\n希望你玩得開心~'))
-    line_bot_api.push_message(event.source.userId, TextSendMessage(text='點擊下方選單了解更多資訊...\n輸入 help 查詢所有指令。'))
-    line_bot_api.push_message(event.source.userId, TextSendMessage(text='使用說明：\nhttp://google.com.tw'))
+# @handler.add(FollowEvent)
+# def handle_follow(event):
+#     line_bot_api.push_message(event.source.userId, StickerSendMessage(packageId=11539, stickerId=52114133))
+#     line_bot_api.push_message(event.source.userId, TextSendMessage(text='Hello, 歡迎你加入 Kerwin-Bot 的好友行列\n希望你玩得開心~'))
+#     line_bot_api.push_message(event.source.userId, TextSendMessage(text='點擊下方選單了解更多資訊...\n輸入 help 查詢所有指令。'))
+#     line_bot_api.push_message(event.source.userId, TextSendMessage(text='使用說明：\nhttp://google.com.tw'))
 
 @handler.add(MessageEvent, message=TextMessage)
 def handle_message(event):
