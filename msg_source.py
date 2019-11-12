@@ -74,7 +74,7 @@ skill = TextSendMessage(text='大學到碩班較常使用的是 C/C++ ，後來�
 music = TemplateSendMessage(
     alt_text='My Music',
     template=ButtonsTemplate(
-        thumbnail_image_url='http://download.seaicons.com/icons/blackvariant/button-ui-app-pack-one/1024/Google-Music-Manager-icon.png',
+        thumbnail_image_url='http://www.jrtstudio.com/files/music_player_icon.png',
         title='音樂人生',
         text='工作之餘音樂是我不可或缺的部分人生，我平常會寫一些創作放到網站上，有時候也會辦一些很小很小的表演',
         actions=[
@@ -84,6 +84,7 @@ music = TemplateSendMessage(
     )
 )
 
+resume = TextSendMessage(text='這是我的履歷，點進去看看吧！\nhttps://www.cakeresume.com/s--BQxhyw5w6PFHD-ZYPB1iOA--/tako-huang')
 
 responseDict = {
     '關於我': about_me,
@@ -94,5 +95,6 @@ responseDict = {
     '工作': work,
     '專長': expertise,
     '技能': skill,
-    '音樂': music
+    '音樂': music,
+    '履歷': resume
 }
