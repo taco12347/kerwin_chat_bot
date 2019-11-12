@@ -37,7 +37,7 @@ education = TemplateSendMessage(
     template=ButtonsTemplate(
         thumbnail_image_url='https://miro.medium.com/fit/c/256/256/2*Ka2wd39BpMA6lm4zanG1ng.png',
         title='學歷',
-        text='碩士：\n國立臺北科技大學 - 資訊工程所\n大學：\n國立臺北科技大學 - 資訊工程系',
+        text='碩士：國立臺北科技大學 - 資訊工程所\n大學：國立臺北科技大學 - 資訊工程系',
         actions=[
             URITemplateAction(label='臺北科技大學 - 資訊工程系', uri='https://csie.ntut.edu.tw/csie/index_i.htm'),
         ]
