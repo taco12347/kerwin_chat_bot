@@ -56,6 +56,7 @@ def handle_message(event):
         line_bot_api.push_message(event.source.user_id, TextSendMessage(text='我聽到你的心聲了！！但再等我做一下這個部分'))
         return None
 
+    line_bot_api.push_message(profile.user_id, TextSendMessage(text='我好像沒辦法理解「' + event.message.text + '」，或許換個方式問問看？'))
 
 if __name__ == "__main__":
     app.run()

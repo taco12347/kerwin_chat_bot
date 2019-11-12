@@ -76,7 +76,7 @@ music = TemplateSendMessage(
     template=ButtonsTemplate(
         thumbnail_image_url='https://b.thumbs.redditmedia.com/obn8AkLEsnOkg_x2LfqOnAloHayRNfqr6yosGqkI_zo.png',
         title='音樂人生',
-        text='工作之餘音樂是我不可或缺的部分人生，我平常會寫一些創作放到網站上，有時候也會辦一些很小很小的表演',
+        text='工作之餘音樂是我不可或缺的部分人生，我平常會寫一些創作放到網站上，有時候也會辦一些很小的表演',
         actions=[
             URITemplateAction(label='Youtube', uri='https://www.youtube.com/watch?v=ENb51OHHgCA'),
             URITemplateAction(label='Street Voice', uri='https://streetvoice.com/taco12347/'),
@@ -85,6 +85,14 @@ music = TemplateSendMessage(
 )
 
 resume = TextSendMessage(text='這是我的履歷，點進去看看吧！\nhttps://www.cakeresume.com/s--BQxhyw5w6PFHD-ZYPB1iOA--/tako-huang')
+
+hello = TextSendMessage(text='Hi, 我是 Kerwin-Bot')
+
+name = TextSendMessage(text='叫我 Kerwin 就可以囉！')
+
+contact = TextSendMessage(text='你可以用 Email: taco12347@gmail.com 跟我聯繫')
+
+github = TextSendMessage(text='我的 Github: https://github.com/taco12347')
 
 responseDict = {
     '關於我': about_me,
@@ -96,5 +104,11 @@ responseDict = {
     '專長': expertise,
     '技能': skill,
     '音樂': music,
-    '履歷': resume
+    '履歷': resume,
+    '您好': hello, '你好': hello, '哈囉': hello, '嗨': hello,
+    '稱呼': name, '名字': name,
+    'mail': contact, '信箱': contact, '聯繫': contact,
+    'github': github, 'git': github, 'Github': github, 'Git': github
+
+
 }
