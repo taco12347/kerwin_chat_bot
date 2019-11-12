@@ -53,7 +53,11 @@ def handle_message(event):
             return None
 
     if 'help' in event.message.text:
-        line_bot_api.push_message(event.source.user_id, TextSendMessage(text='我聽到你的心聲了！！但再等我做一下這個部分'))
+        message = ''
+        for key in msg_src.responseDict.keys():
+            message += key + ', '
+        message += 'help'
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text=message))
         return None
 
     line_bot_api.push_message(profile.user_id, TextSendMessage(text='我好像沒辦法理解「' + event.message.text + '」，或許換個方式問問看？'))
