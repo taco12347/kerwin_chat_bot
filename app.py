@@ -62,5 +62,16 @@ def handle_message(event):
 
     line_bot_api.push_message(profile.user_id, TextSendMessage(text='我好像沒辦法理解「' + event.message.text + '」，或許換個方式問問看？'))
 
+@handler.add(MessageEvent, message=StickerMessage)
+def handle_sticker_message(event):
+    # echo sticker
+    app.logger.ingo(event.message.package_id, event.message.sticker_id)
+    try:
+        line_bot_api.reply_message(event.reply_token, TextSendMessage(text='好巧！我也有這個貼圖耶～'))
+        line_bot_api.reply_message(event.reply_token, StickerSendMessage(package_id=event.message.package_id, sticker_id=event.message.sticker_id))
+    except LineBotApiError:
+        line_bot_api.push_message(event.source.user_id, TextSendMessage(text='我也想要這個貼圖>口<!!!!'))
+        line_bot_api.push_message(event.source.user_id, StickerSendMessage(package_id=11539, sticker_id=52114141))
+
 if __name__ == "__main__":
     app.run()
