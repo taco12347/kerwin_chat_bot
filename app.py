@@ -47,9 +47,15 @@ def handle_message(event):
     except LineBotApiError:
         app.logger.error("Can not get user profile.")
 
+    for key in msg_src.responseDict.keys():
+        if key in event.message.text:
+            line_bot_api.reply_message(event.reply_token, msg_src.responseDict[key])
+            return None
+
     if 'help' in event.message.text:
-        
+        line_bot_api.push_message(event.source.user_id, TextSendMessage(text='我聽到你的心聲了！！但再等我做一下這個部分'))
         return None
+
 
 if __name__ == "__main__":
     app.run()

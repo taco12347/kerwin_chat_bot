@@ -14,3 +14,7 @@ about_me = TemplateSendMessage(
         ]
     )
 )
+
+responseDict = {
+    '關於我': about_me
+} 
