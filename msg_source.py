@@ -74,12 +74,12 @@ skill = TextSendMessage(text='大學到碩班較常使用的是 C/C++ ，後來�
 music = TemplateSendMessage(
     alt_text='My Music',
     template=ButtonsTemplate(
-        thumbnail_image_url='https://pbs.twimg.com/profile_images/3338800670/ec418405dea1befbb825f836adea8b24_400x400.jpeg',
+        thumbnail_image_url='https://b.thumbs.redditmedia.com/obn8AkLEsnOkg_x2LfqOnAloHayRNfqr6yosGqkI_zo.png',
         title='音樂人生',
         text='工作之餘音樂是我不可或缺的部分人生，我平常會寫一些創作放到網站上，有時候也會辦一些很小很小的表演',
         actions=[
             URITemplateAction(label='Youtube', uri='https://www.youtube.com/watch?v=ENb51OHHgCA'),
-            URITemplateAction(label='Streec Voice', uri='https://streetvoice.com/taco12347/'),
+            URITemplateAction(label='Street Voice', uri='https://streetvoice.com/taco12347/'),
         ]
     )
 )
