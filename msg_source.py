@@ -63,8 +63,8 @@ expertise = TemplateSendMessage(
         title='專長',
         text='你想知道哪方面的專長呢？',
         actions=[
-            MessageTemplateAction(label='技能', text='技能')
-            MessageTemplateAction(label='音樂', text='音樂')
+            MessageTemplateAction(label='技能', text='技能'),
+            MessageTemplateAction(label='音樂', text='音樂'),
         ]
     )
 )
