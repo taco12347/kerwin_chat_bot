@@ -36,6 +36,7 @@ def callback():
 
 @handler.add(FollowEvent)
 def handle_follow(event):
+    line_bot_api.reply_message(event.reply_token, TextSendMessage(text='Hello, 我是 Kerwin!!'))
     line_bot_api.push_message(event.source.userId, StickerSendMessage(packageid=11539, stickerId=52114133))
     line_bot_api.push_message(event.source.userId, TextSendMessage(text='Hello, 歡迎你加入 Kerwin-Bot 的好友行列\n希望你玩得開心~'))
     line_bot_api.push_message(event.source.userId, TextSendMessage(text='點擊下方選單了解更多資訊...\n輸入 help 查詢所有指令。'))
